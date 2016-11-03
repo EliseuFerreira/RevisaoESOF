@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Fila {
 
-	ArrayList<Pessoa> pessoas = new ArrayList<Pessoa>();
+	ArrayList<Pessoa> pessoas =  new ArrayList<Pessoa>();
 	
 	public void addPessoa(Pessoa p){
 		pessoas.add(p);
@@ -19,8 +19,13 @@ public class Fila {
 		
 		proximo = verificaGravida();
 		
-		if(proximo == null)
-			proximo = pessoas.get(0);
+		if(proximo == null){
+			proximo = verificaIdoso();
+			if(proximo == null){
+				proximo = pessoas.get(0);
+			}
+			
+		}
 		
 		return proximo;
 	}
