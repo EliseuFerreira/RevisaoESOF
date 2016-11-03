@@ -54,7 +54,7 @@ public class Testes {
 	
 	@Test
 	public void testeProblema(){
-		
+		//gravida vem primeiro e idoso depois na prioridade.
 		Pessoa p1 = new Pessoa("Fulano", false, true);
 		Pessoa p2 = new Pessoa("Ciclana", true, false);
 		Pessoa p3 = new Pessoa("Beltrana", false, false);
